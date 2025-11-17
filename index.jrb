@@ -1,0 +1,88 @@
+/**
+ * JRB is also supported with multi line comments.
+ * VARIABLE DECLARATION.
+ */
+
+// Integer support.
+int $x=10;
+
+// Variable assignment.
+int $y=$x;
+
+// String support.
+string $name="Jerry Beniten";
+string $singleQuote='Single Quote';
+
+// Bloat support.
+float $y=3.14;
+
+// Boolean support (true/false).
+// bool $isFalse=false;
+// bool $isTrue=true;
+
+/**
+ *  ARRAY DECLARATION.
+ */
+
+// Array integer declartion support.
+int[] $numbers = [1, 2, 3, 4];
+
+// Array string declaration support.
+string[] $names = ['Jerry', 'Sheila', 'Krishna'];
+
+// Index/value access support.
+echo $numbers[2];
+
+/**
+ *  FUNCTION.
+ */
+function add(int $a, int $b, int $c, string $name): int {
+    return $a + $b;
+}
+
+// Function call.
+echo add(1, 2, 3, 'test');
+
+
+/**
+ * Conditions
+ */
+int $x = 10;
+if ($x > 10) {
+    echo 'Large Number';
+} else {
+    echo 'Small Number';
+}
+
+/**
+ * Loops
+ */
+int $counter = 0;
+	
+while ($counter < 5) {
+    echo $counter;
+    $counter = $counter + 1;
+}
+
+
+
+/**
+ *  Classes.
+ */
+/*
+    class Person {
+    string $firstName = '';
+    string $lastName = '';
+    int $age = 29;
+    
+    function setPerson(): void {
+        this.$firstName = 'Jerry';
+    }
+
+    function getPerson(): string {
+        return this.$firstName;
+    }
+}
+
+*/
+
