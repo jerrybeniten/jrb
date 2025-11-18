@@ -1,0 +1,117 @@
+/**
+ * This simple math function demonstrates how the basic Beniten Language works.
+ * PHP has been the inspiratopm of this language.
+ */
+
+/**
+ * This is a simple addition operation.
+ *
+ * @param float $a  First input parameter.
+ * @param float $b  Second input parameter.
+ * @return float
+ */
+function addition(float $a, float $b): float {
+    return $a + $b;
+}
+
+/**
+ * This is a simple subtraction operation.
+ *
+ * @param float $a  First input parameter.
+ * @param float $b  Second input parameter.
+ * @return float
+ */
+function subtraction(float $a, float $b): float {
+    return $a - $b;
+}
+
+/**
+ * This is a simple multiplication operation.
+ *
+ * @param float $a  First input parameter.
+ * @param float $b  Second input parameter.
+ * @return float
+ */
+function multiplication(float $a, float $b): float {
+    return $a * $b;
+}
+
+
+/**
+ * This is a simple division operation.
+ *
+ * @param float $a  First input parameter.
+ * @param float $b  Second input parameter.
+ * @return float
+ */
+function division(float $a, float $b): float {
+    return $a / $b;
+}
+
+echo 'Addition';
+float $add = addition(5.1, 1.0);
+echo $add;
+
+echo "Subtraction";
+float $sub = subtraction(5.1, 0.1);
+echo $sub;
+
+echo "Multiplication";
+float $mul = multiplication(2.0, 2.1);
+echo $mul;
+
+echo "Division";
+float $div = division(4.0, 2.0);
+echo $div;
+
+// Condition demonstration.
+// Single commenting capability.
+if ($add > $mul) {
+    echo "Addition is greater than multiplication.";
+} else if ($add < $mul) {
+    echo "Multiplication is greater than addition.";
+} else {
+    echo "They could be equal";
+}
+
+// Boolean testing
+bool $isTrue=true;
+
+if ($isTrue===true) {
+    echo "TYPE CHECKED";
+}
+
+if ($isTrue==true) {
+    echo "Simillarity check without strict comparison";
+}
+
+if ($isTrue==='true') {
+    echo "Simillarity check without strict comparison";
+} else {
+    echo "Do not compare apples and bananas";
+}
+
+// Loop demonstration.
+int $counter = 0;
+	
+while ($counter < 6) {
+
+    echo $counter;
+
+    if ($counter===0) {
+        echo 'Hey it is zero';
+    } else if ($counter===1) {
+        echo 'Lets celebrate and count to one';
+    } else if ($counter===2) {
+        echo "Double quote on two";
+    } else if ($counter===3) {
+        echo "Still double at three";
+    } else if ($counter===4) {
+        echo "Display addition total at four";
+        echo $add;
+    } else {
+        echo "Lets rest at five";
+    }
+    
+    $counter = $counter + 1;
+}
