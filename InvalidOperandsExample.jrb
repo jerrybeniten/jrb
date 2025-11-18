@@ -1,0 +1,5 @@
+int $aInt = 21;
+string $bString = 'Jerry';
+float $result = 0.00;
+
+$result = $aInt + $bString;
