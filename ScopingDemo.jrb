@@ -1,0 +1,6 @@
+function main(): string {
+    string $functionLocalScope = "FN Local Scope";
+    return "hello world";
+}
+
+echo $functionLocalScope;
