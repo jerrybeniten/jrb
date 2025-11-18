@@ -11,9 +11,23 @@ public class LexerInvalidTest {
     }
 
     @Test
-    void testIllegalCharacterInOperations() {
+    void testInvalidVariableNoName() {
         assertThrows(RuntimeException.class, () -> {
-            TestUtils.createLexer("int $x = 10 @ 5;").nextToken();
+            TestUtils.createLexer("$ = 10;").nextToken();
+        });
+    }
+
+    @Test
+    void testUnterminatedDoubleQuotedString() {
+        assertThrows(RuntimeException.class, () -> {
+            TestUtils.createLexer("\"hello").nextToken();
+        });
+    }
+
+    @Test
+    void testGarbageCharacters() {
+        assertThrows(RuntimeException.class, () -> {
+            TestUtils.createLexer("☀★♣").nextToken();
         });
     }
 
