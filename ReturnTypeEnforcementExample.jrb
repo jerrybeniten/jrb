@@ -1,0 +1,3 @@
+function helloWorld(): float {
+    return "27.23";
+}
