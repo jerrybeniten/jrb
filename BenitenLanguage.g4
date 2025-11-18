@@ -140,6 +140,11 @@ GT  : '>' ;
 LE  : '<=' ;
 GE  : '>=' ;
 
+BOOL_LITERAL
+    : 'true'
+    | 'false'
+    ;
+
 VARIABLE
     : '$' [a-zA-Z_] [a-zA-Z0-9_]*
     ;
@@ -161,10 +166,7 @@ STRING
     | '"'  ( ~["\\] | '\\' . )* '"'
     ;
 
-BOOL_LITERAL
-    : 'true'
-    | 'false'
-    ;
+
 
 LPAR   : '(' ;
 RPAR   : ')' ;
