@@ -40,493 +40,277 @@ public class BenitenLanguageBaseListener implements BenitenLanguageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVarDeclaration(BenitenLanguageParser.VarDeclarationContext ctx) { }
+	@Override public void enterVarDecl(BenitenLanguageParser.VarDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVarDeclaration(BenitenLanguageParser.VarDeclarationContext ctx) { }
+	@Override public void exitVarDecl(BenitenLanguageParser.VarDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayDeclaration(BenitenLanguageParser.ArrayDeclarationContext ctx) { }
+	@Override public void enterAssignment(BenitenLanguageParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayDeclaration(BenitenLanguageParser.ArrayDeclarationContext ctx) { }
+	@Override public void exitAssignment(BenitenLanguageParser.AssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVarAssignment(BenitenLanguageParser.VarAssignmentContext ctx) { }
+	@Override public void enterEchoStmt(BenitenLanguageParser.EchoStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVarAssignment(BenitenLanguageParser.VarAssignmentContext ctx) { }
+	@Override public void exitEchoStmt(BenitenLanguageParser.EchoStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayAssignment(BenitenLanguageParser.ArrayAssignmentContext ctx) { }
+	@Override public void enterFuncDecl(BenitenLanguageParser.FuncDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayAssignment(BenitenLanguageParser.ArrayAssignmentContext ctx) { }
+	@Override public void exitFuncDecl(BenitenLanguageParser.FuncDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnStatement(BenitenLanguageParser.ReturnStatementContext ctx) { }
+	@Override public void enterParamList(BenitenLanguageParser.ParamListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnStatement(BenitenLanguageParser.ReturnStatementContext ctx) { }
+	@Override public void exitParamList(BenitenLanguageParser.ParamListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionDeclaration(BenitenLanguageParser.FunctionDeclarationContext ctx) { }
+	@Override public void enterParam(BenitenLanguageParser.ParamContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionDeclaration(BenitenLanguageParser.FunctionDeclarationContext ctx) { }
+	@Override public void exitParam(BenitenLanguageParser.ParamContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionParameters(BenitenLanguageParser.FunctionParametersContext ctx) { }
+	@Override public void enterReturnType(BenitenLanguageParser.ReturnTypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionParameters(BenitenLanguageParser.FunctionParametersContext ctx) { }
+	@Override public void exitReturnType(BenitenLanguageParser.ReturnTypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParamTypeFirst(BenitenLanguageParser.ParamTypeFirstContext ctx) { }
+	@Override public void enterIfStmt(BenitenLanguageParser.IfStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParamTypeFirst(BenitenLanguageParser.ParamTypeFirstContext ctx) { }
+	@Override public void exitIfStmt(BenitenLanguageParser.IfStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParamVarFirst(BenitenLanguageParser.ParamVarFirstContext ctx) { }
+	@Override public void enterWhileStmt(BenitenLanguageParser.WhileStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParamVarFirst(BenitenLanguageParser.ParamVarFirstContext ctx) { }
+	@Override public void exitWhileStmt(BenitenLanguageParser.WhileStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCall(BenitenLanguageParser.FunctionCallContext ctx) { }
+	@Override public void enterReturnStmt(BenitenLanguageParser.ReturnStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionCall(BenitenLanguageParser.FunctionCallContext ctx) { }
+	@Override public void exitReturnStmt(BenitenLanguageParser.ReturnStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpressionList(BenitenLanguageParser.ExpressionListContext ctx) { }
+	@Override public void enterExprStmt(BenitenLanguageParser.ExprStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpressionList(BenitenLanguageParser.ExpressionListContext ctx) { }
+	@Override public void exitExprStmt(BenitenLanguageParser.ExprStmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassDefinition(BenitenLanguageParser.ClassDefinitionContext ctx) { }
+	@Override public void enterBlock(BenitenLanguageParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassDefinition(BenitenLanguageParser.ClassDefinitionContext ctx) { }
+	@Override public void exitBlock(BenitenLanguageParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassVar(BenitenLanguageParser.ClassVarContext ctx) { }
+	@Override public void enterExpr(BenitenLanguageParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassVar(BenitenLanguageParser.ClassVarContext ctx) { }
+	@Override public void exitExpr(BenitenLanguageParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassFunction(BenitenLanguageParser.ClassFunctionContext ctx) { }
+	@Override public void enterEqualityExpr(BenitenLanguageParser.EqualityExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassFunction(BenitenLanguageParser.ClassFunctionContext ctx) { }
+	@Override public void exitEqualityExpr(BenitenLanguageParser.EqualityExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterObjectCreate(BenitenLanguageParser.ObjectCreateContext ctx) { }
+	@Override public void enterRelationalExpr(BenitenLanguageParser.RelationalExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitObjectCreate(BenitenLanguageParser.ObjectCreateContext ctx) { }
+	@Override public void exitRelationalExpr(BenitenLanguageParser.RelationalExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMethodCallExpr(BenitenLanguageParser.MethodCallExprContext ctx) { }
+	@Override public void enterAdditiveExpr(BenitenLanguageParser.AdditiveExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMethodCallExpr(BenitenLanguageParser.MethodCallExprContext ctx) { }
+	@Override public void exitAdditiveExpr(BenitenLanguageParser.AdditiveExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfStatement(BenitenLanguageParser.IfStatementContext ctx) { }
+	@Override public void enterMultiplicativeExpr(BenitenLanguageParser.MultiplicativeExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfStatement(BenitenLanguageParser.IfStatementContext ctx) { }
+	@Override public void exitMultiplicativeExpr(BenitenLanguageParser.MultiplicativeExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStatement(BenitenLanguageParser.WhileStatementContext ctx) { }
+	@Override public void enterUnaryExpr(BenitenLanguageParser.UnaryExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileStatement(BenitenLanguageParser.WhileStatementContext ctx) { }
+	@Override public void exitUnaryExpr(BenitenLanguageParser.UnaryExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlockStatement(BenitenLanguageParser.BlockStatementContext ctx) { }
+	@Override public void enterPrimary(BenitenLanguageParser.PrimaryContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlockStatement(BenitenLanguageParser.BlockStatementContext ctx) { }
+	@Override public void exitPrimary(BenitenLanguageParser.PrimaryContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEchoStatement(BenitenLanguageParser.EchoStatementContext ctx) { }
+	@Override public void enterArgList(BenitenLanguageParser.ArgListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEchoStatement(BenitenLanguageParser.EchoStatementContext ctx) { }
+	@Override public void exitArgList(BenitenLanguageParser.ArgListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExprParen(BenitenLanguageParser.ExprParenContext ctx) { }
+	@Override public void enterArg(BenitenLanguageParser.ArgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExprParen(BenitenLanguageParser.ExprParenContext ctx) { }
+	@Override public void exitArg(BenitenLanguageParser.ArgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExprFieldAccess(BenitenLanguageParser.ExprFieldAccessContext ctx) { }
+	@Override public void enterLiteral(BenitenLanguageParser.LiteralContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExprFieldAccess(BenitenLanguageParser.ExprFieldAccessContext ctx) { }
+	@Override public void exitLiteral(BenitenLanguageParser.LiteralContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExprVariable(BenitenLanguageParser.ExprVariableContext ctx) { }
+	@Override public void enterType(BenitenLanguageParser.TypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExprVariable(BenitenLanguageParser.ExprVariableContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprAddSub(BenitenLanguageParser.ExprAddSubContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprAddSub(BenitenLanguageParser.ExprAddSubContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprComparison(BenitenLanguageParser.ExprComparisonContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprComparison(BenitenLanguageParser.ExprComparisonContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprMethodCall(BenitenLanguageParser.ExprMethodCallContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprMethodCall(BenitenLanguageParser.ExprMethodCallContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprLiteral(BenitenLanguageParser.ExprLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprLiteral(BenitenLanguageParser.ExprLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprArrayAccess(BenitenLanguageParser.ExprArrayAccessContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprArrayAccess(BenitenLanguageParser.ExprArrayAccessContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprMulDiv(BenitenLanguageParser.ExprMulDivContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprMulDiv(BenitenLanguageParser.ExprMulDivContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExprFunctionCall(BenitenLanguageParser.ExprFunctionCallContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExprFunctionCall(BenitenLanguageParser.ExprFunctionCallContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterIntLiteral(BenitenLanguageParser.IntLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIntLiteral(BenitenLanguageParser.IntLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFloatLiteral(BenitenLanguageParser.FloatLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFloatLiteral(BenitenLanguageParser.FloatLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterBoolLiteral(BenitenLanguageParser.BoolLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBoolLiteral(BenitenLanguageParser.BoolLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterStringLiteral(BenitenLanguageParser.StringLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitStringLiteral(BenitenLanguageParser.StringLiteralContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterArrayLiteralExpr(BenitenLanguageParser.ArrayLiteralExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitArrayLiteralExpr(BenitenLanguageParser.ArrayLiteralExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterArrayLiteralValue(BenitenLanguageParser.ArrayLiteralValueContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitArrayLiteralValue(BenitenLanguageParser.ArrayLiteralValueContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTypeInt(BenitenLanguageParser.TypeIntContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTypeInt(BenitenLanguageParser.TypeIntContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTypeFloat(BenitenLanguageParser.TypeFloatContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTypeFloat(BenitenLanguageParser.TypeFloatContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTypeString(BenitenLanguageParser.TypeStringContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTypeString(BenitenLanguageParser.TypeStringContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTypeBool(BenitenLanguageParser.TypeBoolContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTypeBool(BenitenLanguageParser.TypeBoolContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTypeClassIdentifier(BenitenLanguageParser.TypeClassIdentifierContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTypeClassIdentifier(BenitenLanguageParser.TypeClassIdentifierContext ctx) { }
+	@Override public void exitType(BenitenLanguageParser.TypeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

@@ -27,495 +27,233 @@ public interface BenitenLanguageListener extends ParseTreeListener {
 	 */
 	void exitStatement(BenitenLanguageParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code varDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#varDecl}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#varDecl}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarDeclaration(BenitenLanguageParser.VarDeclarationContext ctx);
+	void enterVarDecl(BenitenLanguageParser.VarDeclContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code varDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#varDecl}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#varDecl}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarDeclaration(BenitenLanguageParser.VarDeclarationContext ctx);
+	void exitVarDecl(BenitenLanguageParser.VarDeclContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code arrayDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayDecl}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#assignment}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayDeclaration(BenitenLanguageParser.ArrayDeclarationContext ctx);
+	void enterAssignment(BenitenLanguageParser.AssignmentContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code arrayDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayDecl}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#assignment}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayDeclaration(BenitenLanguageParser.ArrayDeclarationContext ctx);
+	void exitAssignment(BenitenLanguageParser.AssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code varAssignment}
-	 * labeled alternative in {@link BenitenLanguageParser#assignStmt}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#echoStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarAssignment(BenitenLanguageParser.VarAssignmentContext ctx);
+	void enterEchoStmt(BenitenLanguageParser.EchoStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code varAssignment}
-	 * labeled alternative in {@link BenitenLanguageParser#assignStmt}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#echoStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarAssignment(BenitenLanguageParser.VarAssignmentContext ctx);
+	void exitEchoStmt(BenitenLanguageParser.EchoStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code arrayAssignment}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayAssignStmt}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#funcDecl}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayAssignment(BenitenLanguageParser.ArrayAssignmentContext ctx);
+	void enterFuncDecl(BenitenLanguageParser.FuncDeclContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code arrayAssignment}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayAssignStmt}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#funcDecl}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayAssignment(BenitenLanguageParser.ArrayAssignmentContext ctx);
+	void exitFuncDecl(BenitenLanguageParser.FuncDeclContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code returnStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#returnStmt}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#paramList}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturnStatement(BenitenLanguageParser.ReturnStatementContext ctx);
+	void enterParamList(BenitenLanguageParser.ParamListContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code returnStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#returnStmt}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#paramList}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturnStatement(BenitenLanguageParser.ReturnStatementContext ctx);
+	void exitParamList(BenitenLanguageParser.ParamListContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code functionDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#funcDecl}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#param}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionDeclaration(BenitenLanguageParser.FunctionDeclarationContext ctx);
+	void enterParam(BenitenLanguageParser.ParamContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code functionDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#funcDecl}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#param}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionDeclaration(BenitenLanguageParser.FunctionDeclarationContext ctx);
+	void exitParam(BenitenLanguageParser.ParamContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code functionParameters}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParams}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#returnType}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionParameters(BenitenLanguageParser.FunctionParametersContext ctx);
+	void enterReturnType(BenitenLanguageParser.ReturnTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code functionParameters}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParams}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#returnType}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionParameters(BenitenLanguageParser.FunctionParametersContext ctx);
+	void exitReturnType(BenitenLanguageParser.ReturnTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code paramTypeFirst}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParam}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#ifStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterParamTypeFirst(BenitenLanguageParser.ParamTypeFirstContext ctx);
+	void enterIfStmt(BenitenLanguageParser.IfStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code paramTypeFirst}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParam}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#ifStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitParamTypeFirst(BenitenLanguageParser.ParamTypeFirstContext ctx);
+	void exitIfStmt(BenitenLanguageParser.IfStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code paramVarFirst}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParam}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#whileStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterParamVarFirst(BenitenLanguageParser.ParamVarFirstContext ctx);
+	void enterWhileStmt(BenitenLanguageParser.WhileStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code paramVarFirst}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParam}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#whileStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitParamVarFirst(BenitenLanguageParser.ParamVarFirstContext ctx);
+	void exitWhileStmt(BenitenLanguageParser.WhileStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code functionCall}
-	 * labeled alternative in {@link BenitenLanguageParser#funcCall}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#returnStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionCall(BenitenLanguageParser.FunctionCallContext ctx);
+	void enterReturnStmt(BenitenLanguageParser.ReturnStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code functionCall}
-	 * labeled alternative in {@link BenitenLanguageParser#funcCall}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#returnStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionCall(BenitenLanguageParser.FunctionCallContext ctx);
+	void exitReturnStmt(BenitenLanguageParser.ReturnStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code expressionList}
-	 * labeled alternative in {@link BenitenLanguageParser#exprList}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#exprStmt}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpressionList(BenitenLanguageParser.ExpressionListContext ctx);
+	void enterExprStmt(BenitenLanguageParser.ExprStmtContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code expressionList}
-	 * labeled alternative in {@link BenitenLanguageParser#exprList}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#exprStmt}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpressionList(BenitenLanguageParser.ExpressionListContext ctx);
+	void exitExprStmt(BenitenLanguageParser.ExprStmtContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code classDefinition}
-	 * labeled alternative in {@link BenitenLanguageParser#classDecl}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassDefinition(BenitenLanguageParser.ClassDefinitionContext ctx);
+	void enterBlock(BenitenLanguageParser.BlockContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code classDefinition}
-	 * labeled alternative in {@link BenitenLanguageParser#classDecl}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassDefinition(BenitenLanguageParser.ClassDefinitionContext ctx);
+	void exitBlock(BenitenLanguageParser.BlockContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code classVar}
-	 * labeled alternative in {@link BenitenLanguageParser#classMember}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassVar(BenitenLanguageParser.ClassVarContext ctx);
+	void enterExpr(BenitenLanguageParser.ExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code classVar}
-	 * labeled alternative in {@link BenitenLanguageParser#classMember}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassVar(BenitenLanguageParser.ClassVarContext ctx);
+	void exitExpr(BenitenLanguageParser.ExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code classFunction}
-	 * labeled alternative in {@link BenitenLanguageParser#classMember}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#equalityExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassFunction(BenitenLanguageParser.ClassFunctionContext ctx);
+	void enterEqualityExpr(BenitenLanguageParser.EqualityExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code classFunction}
-	 * labeled alternative in {@link BenitenLanguageParser#classMember}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#equalityExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassFunction(BenitenLanguageParser.ClassFunctionContext ctx);
+	void exitEqualityExpr(BenitenLanguageParser.EqualityExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code objectCreate}
-	 * labeled alternative in {@link BenitenLanguageParser#objectCreation}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#relationalExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterObjectCreate(BenitenLanguageParser.ObjectCreateContext ctx);
+	void enterRelationalExpr(BenitenLanguageParser.RelationalExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code objectCreate}
-	 * labeled alternative in {@link BenitenLanguageParser#objectCreation}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#relationalExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitObjectCreate(BenitenLanguageParser.ObjectCreateContext ctx);
+	void exitRelationalExpr(BenitenLanguageParser.RelationalExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code methodCallExpr}
-	 * labeled alternative in {@link BenitenLanguageParser#methodCall}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#additiveExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterMethodCallExpr(BenitenLanguageParser.MethodCallExprContext ctx);
+	void enterAdditiveExpr(BenitenLanguageParser.AdditiveExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code methodCallExpr}
-	 * labeled alternative in {@link BenitenLanguageParser#methodCall}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#additiveExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitMethodCallExpr(BenitenLanguageParser.MethodCallExprContext ctx);
+	void exitAdditiveExpr(BenitenLanguageParser.AdditiveExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#ifStmt}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#multiplicativeExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(BenitenLanguageParser.IfStatementContext ctx);
+	void enterMultiplicativeExpr(BenitenLanguageParser.MultiplicativeExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#ifStmt}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#multiplicativeExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(BenitenLanguageParser.IfStatementContext ctx);
+	void exitMultiplicativeExpr(BenitenLanguageParser.MultiplicativeExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#whileStmt}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#unaryExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhileStatement(BenitenLanguageParser.WhileStatementContext ctx);
+	void enterUnaryExpr(BenitenLanguageParser.UnaryExprContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#whileStmt}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#unaryExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhileStatement(BenitenLanguageParser.WhileStatementContext ctx);
+	void exitUnaryExpr(BenitenLanguageParser.UnaryExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#block}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#primary}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlockStatement(BenitenLanguageParser.BlockStatementContext ctx);
+	void enterPrimary(BenitenLanguageParser.PrimaryContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#block}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#primary}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlockStatement(BenitenLanguageParser.BlockStatementContext ctx);
+	void exitPrimary(BenitenLanguageParser.PrimaryContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code echoStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#echoStmt}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#argList}.
 	 * @param ctx the parse tree
 	 */
-	void enterEchoStatement(BenitenLanguageParser.EchoStatementContext ctx);
+	void enterArgList(BenitenLanguageParser.ArgListContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code echoStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#echoStmt}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#argList}.
 	 * @param ctx the parse tree
 	 */
-	void exitEchoStatement(BenitenLanguageParser.EchoStatementContext ctx);
+	void exitArgList(BenitenLanguageParser.ArgListContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code exprParen}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#arg}.
 	 * @param ctx the parse tree
 	 */
-	void enterExprParen(BenitenLanguageParser.ExprParenContext ctx);
+	void enterArg(BenitenLanguageParser.ArgContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code exprParen}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#arg}.
 	 * @param ctx the parse tree
 	 */
-	void exitExprParen(BenitenLanguageParser.ExprParenContext ctx);
+	void exitArg(BenitenLanguageParser.ArgContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code exprFieldAccess}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#literal}.
 	 * @param ctx the parse tree
 	 */
-	void enterExprFieldAccess(BenitenLanguageParser.ExprFieldAccessContext ctx);
+	void enterLiteral(BenitenLanguageParser.LiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code exprFieldAccess}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#literal}.
 	 * @param ctx the parse tree
 	 */
-	void exitExprFieldAccess(BenitenLanguageParser.ExprFieldAccessContext ctx);
+	void exitLiteral(BenitenLanguageParser.LiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code exprVariable}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Enter a parse tree produced by {@link BenitenLanguageParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void enterExprVariable(BenitenLanguageParser.ExprVariableContext ctx);
+	void enterType(BenitenLanguageParser.TypeContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code exprVariable}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Exit a parse tree produced by {@link BenitenLanguageParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void exitExprVariable(BenitenLanguageParser.ExprVariableContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprAddSub}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprAddSub(BenitenLanguageParser.ExprAddSubContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprAddSub}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprAddSub(BenitenLanguageParser.ExprAddSubContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprComparison}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprComparison(BenitenLanguageParser.ExprComparisonContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprComparison}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprComparison(BenitenLanguageParser.ExprComparisonContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprMethodCall}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprMethodCall(BenitenLanguageParser.ExprMethodCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprMethodCall}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprMethodCall(BenitenLanguageParser.ExprMethodCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprLiteral(BenitenLanguageParser.ExprLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprLiteral(BenitenLanguageParser.ExprLiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprArrayAccess}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprArrayAccess(BenitenLanguageParser.ExprArrayAccessContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprArrayAccess}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprArrayAccess(BenitenLanguageParser.ExprArrayAccessContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprMulDiv}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprMulDiv(BenitenLanguageParser.ExprMulDivContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprMulDiv}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprMulDiv(BenitenLanguageParser.ExprMulDivContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code exprFunctionCall}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExprFunctionCall(BenitenLanguageParser.ExprFunctionCallContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code exprFunctionCall}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExprFunctionCall(BenitenLanguageParser.ExprFunctionCallContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code intLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void enterIntLiteral(BenitenLanguageParser.IntLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code intLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void exitIntLiteral(BenitenLanguageParser.IntLiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code floatLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void enterFloatLiteral(BenitenLanguageParser.FloatLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code floatLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void exitFloatLiteral(BenitenLanguageParser.FloatLiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code boolLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void enterBoolLiteral(BenitenLanguageParser.BoolLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code boolLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void exitBoolLiteral(BenitenLanguageParser.BoolLiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code stringLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void enterStringLiteral(BenitenLanguageParser.StringLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code stringLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void exitStringLiteral(BenitenLanguageParser.StringLiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code arrayLiteralExpr}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void enterArrayLiteralExpr(BenitenLanguageParser.ArrayLiteralExprContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code arrayLiteralExpr}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void exitArrayLiteralExpr(BenitenLanguageParser.ArrayLiteralExprContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code arrayLiteralValue}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayLiteral}.
-	 * @param ctx the parse tree
-	 */
-	void enterArrayLiteralValue(BenitenLanguageParser.ArrayLiteralValueContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code arrayLiteralValue}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayLiteral}.
-	 * @param ctx the parse tree
-	 */
-	void exitArrayLiteralValue(BenitenLanguageParser.ArrayLiteralValueContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code typeInt}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeInt(BenitenLanguageParser.TypeIntContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code typeInt}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeInt(BenitenLanguageParser.TypeIntContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code typeFloat}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeFloat(BenitenLanguageParser.TypeFloatContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code typeFloat}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeFloat(BenitenLanguageParser.TypeFloatContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code typeString}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeString(BenitenLanguageParser.TypeStringContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code typeString}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeString(BenitenLanguageParser.TypeStringContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code typeBool}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeBool(BenitenLanguageParser.TypeBoolContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code typeBool}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeBool(BenitenLanguageParser.TypeBoolContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code typeClassIdentifier}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeClassIdentifier(BenitenLanguageParser.TypeClassIdentifierContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code typeClassIdentifier}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeClassIdentifier(BenitenLanguageParser.TypeClassIdentifierContext ctx);
+	void exitType(BenitenLanguageParser.TypeContext ctx);
 }

@@ -22,290 +22,141 @@ public interface BenitenLanguageVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStatement(BenitenLanguageParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code varDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#varDecl}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#varDecl}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVarDeclaration(BenitenLanguageParser.VarDeclarationContext ctx);
+	T visitVarDecl(BenitenLanguageParser.VarDeclContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code arrayDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayDecl}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#assignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArrayDeclaration(BenitenLanguageParser.ArrayDeclarationContext ctx);
+	T visitAssignment(BenitenLanguageParser.AssignmentContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code varAssignment}
-	 * labeled alternative in {@link BenitenLanguageParser#assignStmt}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#echoStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVarAssignment(BenitenLanguageParser.VarAssignmentContext ctx);
+	T visitEchoStmt(BenitenLanguageParser.EchoStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code arrayAssignment}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayAssignStmt}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#funcDecl}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitArrayAssignment(BenitenLanguageParser.ArrayAssignmentContext ctx);
+	T visitFuncDecl(BenitenLanguageParser.FuncDeclContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code returnStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#returnStmt}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#paramList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitReturnStatement(BenitenLanguageParser.ReturnStatementContext ctx);
+	T visitParamList(BenitenLanguageParser.ParamListContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code functionDeclaration}
-	 * labeled alternative in {@link BenitenLanguageParser#funcDecl}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#param}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionDeclaration(BenitenLanguageParser.FunctionDeclarationContext ctx);
+	T visitParam(BenitenLanguageParser.ParamContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code functionParameters}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParams}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#returnType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionParameters(BenitenLanguageParser.FunctionParametersContext ctx);
+	T visitReturnType(BenitenLanguageParser.ReturnTypeContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code paramTypeFirst}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParam}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#ifStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParamTypeFirst(BenitenLanguageParser.ParamTypeFirstContext ctx);
+	T visitIfStmt(BenitenLanguageParser.IfStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code paramVarFirst}
-	 * labeled alternative in {@link BenitenLanguageParser#funcParam}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#whileStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParamVarFirst(BenitenLanguageParser.ParamVarFirstContext ctx);
+	T visitWhileStmt(BenitenLanguageParser.WhileStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code functionCall}
-	 * labeled alternative in {@link BenitenLanguageParser#funcCall}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#returnStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFunctionCall(BenitenLanguageParser.FunctionCallContext ctx);
+	T visitReturnStmt(BenitenLanguageParser.ReturnStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code expressionList}
-	 * labeled alternative in {@link BenitenLanguageParser#exprList}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#exprStmt}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpressionList(BenitenLanguageParser.ExpressionListContext ctx);
+	T visitExprStmt(BenitenLanguageParser.ExprStmtContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code classDefinition}
-	 * labeled alternative in {@link BenitenLanguageParser#classDecl}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassDefinition(BenitenLanguageParser.ClassDefinitionContext ctx);
+	T visitBlock(BenitenLanguageParser.BlockContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code classVar}
-	 * labeled alternative in {@link BenitenLanguageParser#classMember}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassVar(BenitenLanguageParser.ClassVarContext ctx);
+	T visitExpr(BenitenLanguageParser.ExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code classFunction}
-	 * labeled alternative in {@link BenitenLanguageParser#classMember}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#equalityExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClassFunction(BenitenLanguageParser.ClassFunctionContext ctx);
+	T visitEqualityExpr(BenitenLanguageParser.EqualityExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code objectCreate}
-	 * labeled alternative in {@link BenitenLanguageParser#objectCreation}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#relationalExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitObjectCreate(BenitenLanguageParser.ObjectCreateContext ctx);
+	T visitRelationalExpr(BenitenLanguageParser.RelationalExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code methodCallExpr}
-	 * labeled alternative in {@link BenitenLanguageParser#methodCall}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#additiveExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMethodCallExpr(BenitenLanguageParser.MethodCallExprContext ctx);
+	T visitAdditiveExpr(BenitenLanguageParser.AdditiveExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code ifStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#ifStmt}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#multiplicativeExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIfStatement(BenitenLanguageParser.IfStatementContext ctx);
+	T visitMultiplicativeExpr(BenitenLanguageParser.MultiplicativeExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code whileStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#whileStmt}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#unaryExpr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhileStatement(BenitenLanguageParser.WhileStatementContext ctx);
+	T visitUnaryExpr(BenitenLanguageParser.UnaryExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code blockStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#block}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#primary}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitBlockStatement(BenitenLanguageParser.BlockStatementContext ctx);
+	T visitPrimary(BenitenLanguageParser.PrimaryContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code echoStatement}
-	 * labeled alternative in {@link BenitenLanguageParser#echoStmt}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#argList}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitEchoStatement(BenitenLanguageParser.EchoStatementContext ctx);
+	T visitArgList(BenitenLanguageParser.ArgListContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code exprParen}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#arg}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExprParen(BenitenLanguageParser.ExprParenContext ctx);
+	T visitArg(BenitenLanguageParser.ArgContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code exprFieldAccess}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#literal}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExprFieldAccess(BenitenLanguageParser.ExprFieldAccessContext ctx);
+	T visitLiteral(BenitenLanguageParser.LiteralContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code exprVariable}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
+	 * Visit a parse tree produced by {@link BenitenLanguageParser#type}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExprVariable(BenitenLanguageParser.ExprVariableContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprAddSub}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprAddSub(BenitenLanguageParser.ExprAddSubContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprComparison}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprComparison(BenitenLanguageParser.ExprComparisonContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprMethodCall}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprMethodCall(BenitenLanguageParser.ExprMethodCallContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprLiteral(BenitenLanguageParser.ExprLiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprArrayAccess}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprArrayAccess(BenitenLanguageParser.ExprArrayAccessContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprMulDiv}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprMulDiv(BenitenLanguageParser.ExprMulDivContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code exprFunctionCall}
-	 * labeled alternative in {@link BenitenLanguageParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExprFunctionCall(BenitenLanguageParser.ExprFunctionCallContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code intLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIntLiteral(BenitenLanguageParser.IntLiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code floatLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFloatLiteral(BenitenLanguageParser.FloatLiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code boolLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBoolLiteral(BenitenLanguageParser.BoolLiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code stringLiteral}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStringLiteral(BenitenLanguageParser.StringLiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code arrayLiteralExpr}
-	 * labeled alternative in {@link BenitenLanguageParser#literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitArrayLiteralExpr(BenitenLanguageParser.ArrayLiteralExprContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code arrayLiteralValue}
-	 * labeled alternative in {@link BenitenLanguageParser#arrayLiteral}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitArrayLiteralValue(BenitenLanguageParser.ArrayLiteralValueContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code typeInt}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeInt(BenitenLanguageParser.TypeIntContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code typeFloat}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeFloat(BenitenLanguageParser.TypeFloatContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code typeString}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeString(BenitenLanguageParser.TypeStringContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code typeBool}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeBool(BenitenLanguageParser.TypeBoolContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code typeClassIdentifier}
-	 * labeled alternative in {@link BenitenLanguageParser#type}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTypeClassIdentifier(BenitenLanguageParser.TypeClassIdentifierContext ctx);
+	T visitType(BenitenLanguageParser.TypeContext ctx);
 }
