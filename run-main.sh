@@ -6,4 +6,4 @@ set -e
 # Print commands (optional)
 set -x
 
-java SemanticAnalyzer ScopingDemo.jrb
+java SemanticAnalyzer SimpleMathOperation.jrb

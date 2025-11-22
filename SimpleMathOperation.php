@@ -99,14 +99,6 @@ if ($isTrue==true) {
     echo "Simillarity check without strict comparison";
 }
 
-if ($isTrue==='true') {
-    echo "\n";
-    echo "Simillarity check without strict comparison";
-} else {
-    echo "\n";
-    echo "Do not compare apples and bananas";
-}
-
 // Loop demonstration.
 (int) $counter = 0;
 	
